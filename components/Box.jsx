@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col'
 import { Container } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import '../components/style.css'
+
 export default function Box() {
     const [data, setdata] = useState([])
     useEffect(() => {

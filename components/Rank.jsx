@@ -2,7 +2,7 @@ import React from 'react'
 import { useState,useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap'
 import axios from 'axios';
-import '../components/style.css'
+
 import rank1 from '../components/img/rank1.png'
 export default function Rank() {
     const [data, setdata] = useState([])
