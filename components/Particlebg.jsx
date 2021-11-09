@@ -2,7 +2,6 @@ import React from 'react'
 import Particles from 'react-particles-js';
 import ParticleConfig from "./particle-config"
 import { tsParticles } from "tsparticles";
-import ParticleAnimation from 'react-particle-animation'
 
 export default function Particlebg() {
  

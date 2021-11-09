@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Rank from '../components/Rank'
 import Box from '../components/Box'
 import MyApp from './_app';
+import Particlebg from '../components/Particlebg'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
   
       <Rank/>
       <Box/>
+      <Particlebg/>
     </div>
 
 
