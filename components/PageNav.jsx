@@ -10,7 +10,7 @@ export default function PageNav() {
                     <Pagination >
                         <Pagination.First />
                         <Pagination.Prev />
-                        <Pagination.Item href = '/page1' style={{color: '#CEE5D0'}} >{1}</Pagination.Item>
+                        <Pagination.Item href = '/' style={{color: '#CEE5D0'}} >{1}</Pagination.Item>
                         
                         <Pagination.Item href = '/page2' style={{backgroundColor: '#CEE5D0'}}>{2}</Pagination.Item>
                         
