@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col'
 import { Container } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
 
 export default function Box() {
     const [data, setdata] = useState([])
@@ -19,25 +20,23 @@ export default function Box() {
 
     return (
         <div>
-            <Container style={{ paddingTop: 100}} classname ='bigboxs'>
+            <Container style={{ paddingTop: 100 }} classname='bigboxs'>
                 <Row >
-                    <Col classname ='boxs' md={6} lg ={4}>
-                        <Card style={{ width: '18rem', height: '18rem' }}>
-
-                            <Card.Img variant="top" src={data.data?.top[0].image_url} style={{ width: '18rem', height: '18rem' }} />
-                            <Card.Body style={{ backgroundColor: '#FAEEE0' }}>
-                                <Card.Title>1.{data.data?.top[0].title}</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
+                    <Col classname='boxs' md={6} lg={4}>
+                        <MDBCard style={{ maxWidth: '22rem' }}>
+                            <MDBCardImage src='https://mdbcdn.b-cdn.net/img/new/standard/nature/184.jpg' position='top' alt='...' />
+                            <MDBCardBody>
+                                <MDBCardTitle>Card title</MDBCardTitle>
+                                <MDBCardText>
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </MDBCardText>
+                                <MDBBtn href='#'>Button</MDBBtn>
+                            </MDBCardBody>
+                        </MDBCard>
 
                     </Col>
 
-                    <Col style={{ paddingRight: 50 }} classname ='boxs'  md={6} lg ={4} >    <Card style={{ width: '18rem', height: '18rem' }}>
+                    <Col style={{ paddingRight: 50 }} classname='boxs' md={6} lg={4} >    <Card style={{ width: '18rem', height: '18rem' }}>
 
                         <Card.Img variant="top" src={data.data?.top[1].image_url} style={{ width: '18rem', height: '18rem' }} />
                         <Card.Body style={{ backgroundColor: '#FAEEE0' }}>
@@ -50,7 +49,7 @@ export default function Box() {
                         </Card.Body>
                     </Card>
                     </Col>
-                    <Col style={{  paddingLeft: 0 }}classname ='boxs'  md={6} lg ={4}>    <Card style={{ width: '18rem', height: '18rem' }}>
+                    <Col style={{ paddingLeft: 0 }} classname='boxs' md={6} lg={4}>    <Card style={{ width: '18rem', height: '18rem' }}>
 
                         <Card.Img variant="top" src={data.data?.top[2].image_url} style={{ width: '18rem', height: '18rem' }} />
                         <Card.Body style={{ backgroundColor: '#FAEEE0' }}>
@@ -68,7 +67,7 @@ export default function Box() {
 
                 </Row>
                 <Row style={{ paddingTop: 250 }}>
-                    <Col classname ='boxs'  md={6} lg ={4}>     <Card style={{ width: '18rem', height: '18rem' }}>
+                    <Col classname='boxs' md={6} lg={4}>     <Card style={{ width: '18rem', height: '18rem' }}>
 
                         <Card.Img variant="top" src={data.data?.top[3].image_url} style={{ width: '18rem', height: '18rem' }} />
                         <Card.Body style={{ backgroundColor: '#FAEEE0' }}>
@@ -82,7 +81,7 @@ export default function Box() {
                     </Card>
 
                     </Col>
-                    <Col  classname ='boxs'  md={6} lg ={4}>    <Card style={{ width: '18rem', height: '18rem' }}>
+                    <Col classname='boxs' md={6} lg={4}>    <Card style={{ width: '18rem', height: '18rem' }}>
 
                         <Card.Img variant="top" src={data.data?.top[4].image_url} style={{ width: '18rem', height: '18rem' }} />
                         <Card.Body style={{ backgroundColor: '#FAEEE0' }}>
@@ -96,7 +95,7 @@ export default function Box() {
                     </Card>
 
                     </Col>
-                    <Col classname ='boxs'  md={6} lg ={4}>    <Card style={{ width: '18rem', height: '18rem' }}>
+                    <Col classname='boxs' md={6} lg={4}>    <Card style={{ width: '18rem', height: '18rem' }}>
 
                         <Card.Img variant="top" src={data.data?.top[5].image_url} style={{ width: '18rem', height: '18rem' }} />
                         <Card.Body style={{ backgroundColor: '#FAEEE0' }}>
@@ -121,7 +120,7 @@ export default function Box() {
 
 
                 </Row>
-                <Row style={{ paddingTop: 250 }} classname ='boxs'>
+                <Row style={{ paddingTop: 250 }} classname='boxs'>
                     <Col >     <Card style={{ width: '18rem', height: '18rem' }}>
 
                         <Card.Img variant="top" src={data.data?.top[6].image_url} style={{ width: '18rem', height: '18rem' }} />
@@ -136,7 +135,7 @@ export default function Box() {
                     </Card>
 
                     </Col>
-                    <Col classname ='boxs'>    <Card style={{ width: '18rem', height: '18rem' }}>
+                    <Col classname='boxs'>    <Card style={{ width: '18rem', height: '18rem' }}>
 
                         <Card.Img variant="top" src={data.data?.top[7].image_url} style={{ width: '18rem', height: '18rem' }} />
                         <Card.Body style={{ backgroundColor: '#FAEEE0' }}>
@@ -150,7 +149,7 @@ export default function Box() {
                     </Card>
 
                     </Col>
-                    <Col classname ='boxs'>    <Card style={{ width: '18rem', height: '18rem' }}>
+                    <Col classname='boxs'>    <Card style={{ width: '18rem', height: '18rem' }}>
 
                         <Card.Img variant="top" src={data.data?.top[8].image_url} style={{ width: '18rem', height: '18rem' }} />
                         <Card.Body style={{ backgroundColor: '#FAEEE0' }}>
@@ -176,7 +175,7 @@ export default function Box() {
 
                 </Row>
                 <Row style={{ paddingTop: 250 }}>
-                    <Col  classname ='boxs'>     <Card style={{ width: '18rem', height: '18rem' }}>
+                    <Col classname='boxs'>     <Card style={{ width: '18rem', height: '18rem' }}>
 
                         <Card.Img variant="top" src={data.data?.top[9].image_url} style={{ width: '18rem', height: '18rem' }} />
                         <Card.Body style={{ backgroundColor: '#FAEEE0' }}>
@@ -190,7 +189,7 @@ export default function Box() {
                     </Card>
 
                     </Col>
-                    <Col classname ='boxs'>    <Card style={{ width: '18rem', height: '18rem' }}>
+                    <Col classname='boxs'>    <Card style={{ width: '18rem', height: '18rem' }}>
 
                         <Card.Img variant="top" src={data.data?.top[10].image_url} style={{ width: '18rem', height: '18rem' }} />
                         <Card.Body style={{ backgroundColor: '#FAEEE0' }}>
@@ -204,7 +203,7 @@ export default function Box() {
                     </Card>
 
                     </Col>
-                    <Col classname ='boxs'>    <Card style={{ width: '18rem', height: '18rem' }}>
+                    <Col classname='boxs'>    <Card style={{ width: '18rem', height: '18rem' }}>
 
                         <Card.Img variant="top" src={data.data?.top[11].image_url} style={{ width: '18rem', height: '18rem' }} />
                         <Card.Body style={{ backgroundColor: '#FAEEE0' }}>
