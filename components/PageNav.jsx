@@ -5,7 +5,7 @@ import { Row } from 'react-bootstrap';
 export default function PageNav() {
     return (
         <div>
-            <Container md={4} xs={3} style={{ paddingTop: 300 }}>
+            <Container md={4} xs={3} style={{ paddingTop: 40 }}>
                 <Row>
                     <Pagination >
                         <Pagination.First />
