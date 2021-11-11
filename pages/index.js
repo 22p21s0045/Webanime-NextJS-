@@ -5,7 +5,7 @@ import Rank from '../components/Rank'
 import Box from '../components/Box'
 import MyApp from './_app';
 import Particlebg from '../components/Particlebg'
-
+import PageNav from '../components/PageNav'
 export default function Home() {
   return (
     <div>
@@ -14,6 +14,7 @@ export default function Home() {
       <Rank/>
       <Box/>
       <Particlebg/>
+      <PageNav/>
     </div>
 
 
