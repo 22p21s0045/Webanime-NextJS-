@@ -12,6 +12,7 @@ import {
   MDBCardImage,
   MDBBtn,
 } from "mdb-react-ui-kit";
+
 import { AwesomeButton } from "react-awesome-button";
 
 export default function Box() {
@@ -59,6 +60,11 @@ export default function Box() {
                   type="primary"
                   className="awecomments"
                   style={{ paddingLeft: 5 }}
+                  onPress={next =>{
+
+
+                  }}
+
                 >
                   <img
                     src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
@@ -654,6 +660,7 @@ export default function Box() {
           </Col>
         </Row>
       </Container>
+      
     </div>
   );
 }
