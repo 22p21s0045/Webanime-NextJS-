@@ -42,8 +42,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>1. {data.data?.top[0].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
 
                   <AwesomeButton
@@ -88,8 +87,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>2. {data.data?.top[1].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
@@ -131,8 +129,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>3. {data.data?.top[2].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
@@ -176,8 +173,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>4. {data.data?.top[3].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
@@ -219,8 +215,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>5. {data.data?.top[4].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
@@ -264,8 +259,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>6. {data.data?.top[5].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
@@ -309,8 +303,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>7. {data.data?.top[6].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
@@ -352,8 +345,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>8. {data.data?.top[7].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
@@ -396,8 +388,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>9. {data.data?.top[8].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
@@ -445,8 +436,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>10. {data.data?.top[9].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
@@ -491,8 +481,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>11. {data.data?.top[10].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
@@ -537,8 +526,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>12. {data.data?.top[11].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
@@ -585,8 +573,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>13. {data.data?.top[12].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
@@ -631,8 +618,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>14. {data.data?.top[13].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
@@ -678,8 +664,7 @@ export default function Box() {
                 <MDBCardBody>
                   <MDBCardTitle>15. {data.data?.top[14].title} </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </MDBCardText>
                   <AwesomeButton
                     size="icon"
