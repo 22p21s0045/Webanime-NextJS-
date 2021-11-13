@@ -14,6 +14,7 @@ import {
 } from "mdb-react-ui-kit";
 
 import { AwesomeButton } from "react-awesome-button";
+import Aos from "aos";
 
 export default function Box() {
   const [data, setdata] = useState([]);
@@ -21,6 +22,7 @@ export default function Box() {
     axios("https://api.jikan.moe/v3/top/anime/1/bypopularity").then(
       (response) => setdata(response)
     );
+    Aos.init();
   }, []);
   console.log(data.data?.top[0].image_url);
 
@@ -29,388 +31,442 @@ export default function Box() {
       <Container style={{ paddingTop: 100 }} classname="bigboxs">
         <Row>
           <Col classname="boxs" md={6} lg={4}>
-            <MDBCard style={{ maxWidth: "18rem" }}>
-              <MDBCardImage
-                src={data.data?.top[0].image_url}
-                style={{ width: "18rem", height: "18rem" }}
-                position="top"
-                alt="..."
-              />
-              <MDBCardBody>
-                <MDBCardTitle>1. {data.data?.top[0].title} </MDBCardTitle>
-                <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </MDBCardText>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-anchor=".example-selector"
+            >
+              <MDBCard style={{ maxWidth: "18rem" }}>
+                <MDBCardImage
+                  src={data.data?.top[0].image_url}
+                  style={{ width: "18rem", height: "18rem" }}
+                  position="top"
+                  alt="..."
+                />
+                <MDBCardBody>
+                  <MDBCardTitle>1. {data.data?.top[0].title} </MDBCardTitle>
+                  <MDBCardText>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </MDBCardText>
 
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                >
-                  <img
-                    src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
-                    alt="love"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                  className="awecomments"
-                  style={{ paddingLeft: 5 }}
-                  onPress={next =>{
-
-
-                  }}
-
-                >
-                  <img
-                    src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
-                    alt="comment"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-              </MDBCardBody>
-            </MDBCard>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                  >
+                    <img
+                      src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
+                      alt="love"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                    className="awecomments"
+                    style={{ paddingLeft: 5 }}
+                    onPress={(next) => {}}
+                  >
+                    <img
+                      src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
+                      alt="comment"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                </MDBCardBody>
+              </MDBCard>
+            </div>
           </Col>
 
           <Col classname="boxs" md={6} lg={4}>
-            <MDBCard style={{ maxWidth: "18rem" }}>
-              <MDBCardImage
-                src={data.data?.top[1].image_url}
-                style={{ width: "18rem", height: "18rem" }}
-                position="top"
-                alt="..."
-              />
-              <MDBCardBody>
-                <MDBCardTitle>2. {data.data?.top[1].title} </MDBCardTitle>
-                <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </MDBCardText>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                >
-                  <img
-                    src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
-                    alt="love"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                  className="awecomments"
-                  style={{ paddingLeft: 5 }}
-                >
-                  <img
-                    src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
-                    alt="comment"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-              </MDBCardBody>
-            </MDBCard>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-anchor=".example-selector"
+            >
+              <MDBCard style={{ maxWidth: "18rem" }}>
+                <MDBCardImage
+                  src={data.data?.top[1].image_url}
+                  style={{ width: "18rem", height: "18rem" }}
+                  position="top"
+                  alt="..."
+                />
+                <MDBCardBody>
+                  <MDBCardTitle>2. {data.data?.top[1].title} </MDBCardTitle>
+                  <MDBCardText>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </MDBCardText>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                  >
+                    <img
+                      src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
+                      alt="love"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                    className="awecomments"
+                    style={{ paddingLeft: 5 }}
+                  >
+                    <img
+                      src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
+                      alt="comment"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                </MDBCardBody>
+              </MDBCard>
+            </div>
           </Col>
           <Col classname="boxs" md={6} lg={4}>
-            <MDBCard style={{ maxWidth: "18rem" }}>
-              <MDBCardImage
-                src={data.data?.top[2].image_url}
-                style={{ width: "18rem", height: "18rem" }}
-                position="top"
-                alt="..."
-              />
-              <MDBCardBody>
-                <MDBCardTitle>3. {data.data?.top[2].title} </MDBCardTitle>
-                <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </MDBCardText>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                >
-                  <img
-                    src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
-                    alt="love"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                  className="awecomments"
-                  style={{ paddingLeft: 5 }}
-                >
-                  <img
-                    src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
-                    alt="comment"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-              </MDBCardBody>
-            </MDBCard>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-anchor=".example-selector"
+            >
+              <MDBCard style={{ maxWidth: "18rem" }}>
+                <MDBCardImage
+                  src={data.data?.top[2].image_url}
+                  style={{ width: "18rem", height: "18rem" }}
+                  position="top"
+                  alt="..."
+                />
+                <MDBCardBody>
+                  <MDBCardTitle>3. {data.data?.top[2].title} </MDBCardTitle>
+                  <MDBCardText>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </MDBCardText>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                  >
+                    <img
+                      src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
+                      alt="love"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                    className="awecomments"
+                    style={{ paddingLeft: 5 }}
+                  >
+                    <img
+                      src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
+                      alt="comment"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                </MDBCardBody>
+              </MDBCard>
+            </div>
           </Col>
         </Row>
         <Row style={{ paddingTop: 60 }}>
           <Col classname="boxs" md={6} lg={4}>
-            <MDBCard style={{ maxWidth: "18rem" }}>
-              <MDBCardImage
-                src={data.data?.top[3].image_url}
-                style={{ width: "18rem", height: "18rem" }}
-                position="top"
-                alt="..."
-              />
-              <MDBCardBody>
-                <MDBCardTitle>4. {data.data?.top[3].title} </MDBCardTitle>
-                <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </MDBCardText>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                >
-                  <img
-                    src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
-                    alt="love"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                  className="awecomments"
-                  style={{ paddingLeft: 5 }}
-                >
-                  <img
-                    src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
-                    alt="comment"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-              </MDBCardBody>
-            </MDBCard>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-anchor=".example-selector"
+            >
+              <MDBCard style={{ maxWidth: "18rem" }}>
+                <MDBCardImage
+                  src={data.data?.top[3].image_url}
+                  style={{ width: "18rem", height: "18rem" }}
+                  position="top"
+                  alt="..."
+                />
+                <MDBCardBody>
+                  <MDBCardTitle>4. {data.data?.top[3].title} </MDBCardTitle>
+                  <MDBCardText>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </MDBCardText>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                  >
+                    <img
+                      src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
+                      alt="love"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                    className="awecomments"
+                    style={{ paddingLeft: 5 }}
+                  >
+                    <img
+                      src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
+                      alt="comment"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                </MDBCardBody>
+              </MDBCard>
+            </div>
           </Col>
           <Col classname="boxs" md={6} lg={4}>
-            <MDBCard style={{ maxWidth: "18rem" }}>
-              <MDBCardImage
-                src={data.data?.top[4].image_url}
-                style={{ width: "18rem", height: "18rem" }}
-                position="top"
-                alt="..."
-              />
-              <MDBCardBody>
-                <MDBCardTitle>5. {data.data?.top[4].title} </MDBCardTitle>
-                <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </MDBCardText>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                >
-                  <img
-                    src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
-                    alt="love"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                  className="awecomments"
-                  style={{ paddingLeft: 5 }}
-                >
-                  <img
-                    src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
-                    alt="comment"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-              </MDBCardBody>
-            </MDBCard>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-anchor=".example-selector"
+            >
+              <MDBCard style={{ maxWidth: "18rem" }}>
+                <MDBCardImage
+                  src={data.data?.top[4].image_url}
+                  style={{ width: "18rem", height: "18rem" }}
+                  position="top"
+                  alt="..."
+                />
+                <MDBCardBody>
+                  <MDBCardTitle>5. {data.data?.top[4].title} </MDBCardTitle>
+                  <MDBCardText>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </MDBCardText>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                  >
+                    <img
+                      src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
+                      alt="love"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                    className="awecomments"
+                    style={{ paddingLeft: 5 }}
+                  >
+                    <img
+                      src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
+                      alt="comment"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                </MDBCardBody>
+              </MDBCard>
+            </div>
           </Col>
+
           <Col classname="boxs" md={6} lg={4}>
-            <MDBCard style={{ maxWidth: "18rem" }}>
-              <MDBCardImage
-                src={data.data?.top[5].image_url}
-                style={{ width: "18rem", height: "18rem" }}
-                position="top"
-                alt="..."
-              />
-              <MDBCardBody>
-                <MDBCardTitle>6. {data.data?.top[5].title} </MDBCardTitle>
-                <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </MDBCardText>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                >
-                  <img
-                    src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
-                    alt="love"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                  className="awecomments"
-                  style={{ paddingLeft: 5 }}
-                >
-                  <img
-                    src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
-                    alt="comment"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-              </MDBCardBody>
-            </MDBCard>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-anchor=".example-selector"
+            >
+              <MDBCard style={{ maxWidth: "18rem" }}>
+                <MDBCardImage
+                  src={data.data?.top[5].image_url}
+                  style={{ width: "18rem", height: "18rem" }}
+                  position="top"
+                  alt="..."
+                />
+
+                <MDBCardBody>
+                  <MDBCardTitle>6. {data.data?.top[5].title} </MDBCardTitle>
+                  <MDBCardText>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </MDBCardText>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                  >
+                    <img
+                      src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
+                      alt="love"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                    className="awecomments"
+                    style={{ paddingLeft: 5 }}
+                  >
+                    <img
+                      src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
+                      alt="comment"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                </MDBCardBody>
+              </MDBCard>
+            </div>
           </Col>
         </Row>
         <Row style={{ paddingTop: 60 }} classname="boxs">
           <Col classname="boxs" md={6} lg={4}>
-            <MDBCard style={{ maxWidth: "18rem" }}>
-              <MDBCardImage
-                src={data.data?.top[6].image_url}
-                style={{ width: "18rem", height: "18rem" }}
-                position="top"
-                alt="..."
-              />
-              <MDBCardBody>
-                <MDBCardTitle>7. {data.data?.top[6].title} </MDBCardTitle>
-                <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </MDBCardText>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                >
-                  <img
-                    src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
-                    alt="love"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                  className="awecomments"
-                  style={{ paddingLeft: 5 }}
-                >
-                  <img
-                    src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
-                    alt="comment"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-              </MDBCardBody>
-            </MDBCard>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-anchor=".example-selector"
+            >
+              <MDBCard style={{ maxWidth: "18rem" }}>
+                <MDBCardImage
+                  src={data.data?.top[6].image_url}
+                  style={{ width: "18rem", height: "18rem" }}
+                  position="top"
+                  alt="..."
+                />
+                <MDBCardBody>
+                  <MDBCardTitle>7. {data.data?.top[6].title} </MDBCardTitle>
+                  <MDBCardText>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </MDBCardText>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                  >
+                    <img
+                      src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
+                      alt="love"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                    className="awecomments"
+                    style={{ paddingLeft: 5 }}
+                  >
+                    <img
+                      src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
+                      alt="comment"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                </MDBCardBody>
+              </MDBCard>
+            </div>
           </Col>
           <Col classname="boxs" md={6} lg={4}>
-            <MDBCard style={{ maxWidth: "18rem" }}>
-              <MDBCardImage
-                src={data.data?.top[7].image_url}
-                style={{ width: "18rem", height: "18rem" }}
-                position="top"
-                alt="..."
-              />
-              <MDBCardBody>
-                <MDBCardTitle>8. {data.data?.top[7].title} </MDBCardTitle>
-                <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </MDBCardText>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                >
-                  <img
-                    src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
-                    alt="love"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                  className="awecomments"
-                  style={{ paddingLeft: 5 }}
-                >
-                  <img
-                    src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
-                    alt="comment"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-              </MDBCardBody>
-            </MDBCard>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-anchor=".example-selector"
+            >
+              <MDBCard style={{ maxWidth: "18rem" }}>
+                <MDBCardImage
+                  src={data.data?.top[7].image_url}
+                  style={{ width: "18rem", height: "18rem" }}
+                  position="top"
+                  alt="..."
+                />
+                <MDBCardBody>
+                  <MDBCardTitle>8. {data.data?.top[7].title} </MDBCardTitle>
+                  <MDBCardText>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </MDBCardText>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                  >
+                    <img
+                      src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
+                      alt="love"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                    className="awecomments"
+                    style={{ paddingLeft: 5 }}
+                  >
+                    <img
+                      src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
+                      alt="comment"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                </MDBCardBody>
+              </MDBCard>
+            </div>
           </Col>
           <Col classname="boxs" md={6} lg={4}>
-            <MDBCard style={{ maxWidth: "18rem" }}>
-              <MDBCardImage
-                src={data.data?.top[8].image_url}
-                style={{ width: "18rem", height: "18rem" }}
-                position="top"
-                alt="..."
-              />
-              <MDBCardBody>
-                <MDBCardTitle>9. {data.data?.top[8].title} </MDBCardTitle>
-                <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </MDBCardText>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                >
-                  <img
-                    src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
-                    alt="love"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-                <AwesomeButton
-                  size="icon"
-                  href="https://img.icons8.com/color/48/000000/youtube-play.png"
-                  type="primary"
-                  className="awecomments"
-                  style={{ paddingLeft: 5 }}
-                >
-                  <img
-                    src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
-                    alt="comment"
-                    width="30rem"
-                  />
-                </AwesomeButton>
-              </MDBCardBody>
-            </MDBCard>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-anchor=".example-selector"
+            >
+              <MDBCard style={{ maxWidth: "18rem" }}>
+                <MDBCardImage
+                  src={data.data?.top[8].image_url}
+                  style={{ width: "18rem", height: "18rem" }}
+                  position="top"
+                  alt="..."
+                />
+
+                <MDBCardBody>
+                  <MDBCardTitle>9. {data.data?.top[8].title} </MDBCardTitle>
+                  <MDBCardText>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </MDBCardText>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                  >
+                    <img
+                      src="https://www.img.in.th/images/cf9793aaac2dcb9d12d5cefdf7452b1f.png"
+                      alt="love"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                  <AwesomeButton
+                    size="icon"
+                    href="https://img.icons8.com/color/48/000000/youtube-play.png"
+                    type="primary"
+                    className="awecomments"
+                    style={{ paddingLeft: 5 }}
+                  >
+                    <img
+                      src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
+                      alt="comment"
+                      width="30rem"
+                    />
+                  </AwesomeButton>
+                </MDBCardBody>
+              </MDBCard>
+            </div>
           </Col>
         </Row>
         <Row style={{ paddingTop: 60 }}>
           <Col classname="boxs" md={6} lg={4}>
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".example-selector">
             <MDBCard style={{ maxWidth: "18rem" }}>
               <MDBCardImage
                 src={data.data?.top[9].image_url}
@@ -418,6 +474,7 @@ export default function Box() {
                 position="top"
                 alt="..."
               />
+              
               <MDBCardBody>
                 <MDBCardTitle>10. {data.data?.top[9].title} </MDBCardTitle>
                 <MDBCardText>
@@ -450,8 +507,10 @@ export default function Box() {
                 </AwesomeButton>
               </MDBCardBody>
             </MDBCard>
+            </div>
           </Col>
           <Col classname="boxs" md={6} lg={4}>
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".example-selector">
             <MDBCard style={{ maxWidth: "18rem" }}>
               <MDBCardImage
                 src={data.data?.top[10].image_url}
@@ -491,8 +550,10 @@ export default function Box() {
                 </AwesomeButton>
               </MDBCardBody>
             </MDBCard>
+            </div>
           </Col>
           <Col classname="boxs" md={6} lg={4}>
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".example-selector">
             <MDBCard style={{ maxWidth: "18rem" }}>
               <MDBCardImage
                 src={data.data?.top[11].image_url}
@@ -532,10 +593,12 @@ export default function Box() {
                 </AwesomeButton>
               </MDBCardBody>
             </MDBCard>
+            </div>
           </Col>
         </Row>
         <Row style={{ paddingTop: 60 }}>
           <Col classname="boxs" md={6} lg={4}>
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".example-selector">
             <MDBCard style={{ maxWidth: "18rem" }}>
               <MDBCardImage
                 src={data.data?.top[12].image_url}
@@ -575,8 +638,10 @@ export default function Box() {
                 </AwesomeButton>
               </MDBCardBody>
             </MDBCard>
+            </div>
           </Col>
           <Col classname="boxs" md={6} lg={4}>
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".example-selector">
             <MDBCard style={{ maxWidth: "18rem" }}>
               <MDBCardImage
                 src={data.data?.top[13].image_url}
@@ -616,8 +681,10 @@ export default function Box() {
                 </AwesomeButton>
               </MDBCardBody>
             </MDBCard>
+            </div>
           </Col>
           <Col classname="boxs" md={6} lg={4}>
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".example-selector">
             <MDBCard style={{ maxWidth: "18rem" }}>
               <MDBCardImage
                 src={data.data?.top[14].image_url}
@@ -625,6 +692,7 @@ export default function Box() {
                 position="top"
                 alt="..."
               />
+             
               <MDBCardBody>
                 <MDBCardTitle>15. {data.data?.top[14].title} </MDBCardTitle>
                 <MDBCardText>
@@ -657,10 +725,10 @@ export default function Box() {
                 </AwesomeButton>
               </MDBCardBody>
             </MDBCard>
+            </div>
           </Col>
         </Row>
       </Container>
-      
     </div>
   );
 }
