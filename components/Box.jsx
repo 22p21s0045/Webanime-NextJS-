@@ -12,6 +12,7 @@ import {
   MDBCardImage,
   MDBBtn,
 } from "mdb-react-ui-kit";
+import CountUp from "react-countup";
 
 import { AwesomeButton } from "react-awesome-button";
 import Aos from "aos";
@@ -24,13 +25,20 @@ export default function Box() {
       (response) => setdata(response)
     );
     Aos.init();
+    WebFont.load({
+      google: {
+        families: ["Droid Sans", "Chilanka"],
+      },
+    });
   }, []);
   const ref = collection(db, "Data");
   console.log(ref);
-  const [databases, setdatabases] = useState([{
-    Name: "",
-    Like: 0,
-  }]);
+  const [databases, setdatabases] = useState([
+    {
+      Name: "",
+      Like: 0,
+    },
+  ]);
   useEffect(() => {}, databases);
 
   return (
@@ -75,6 +83,7 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
+                  <CountUp end={100} className="counts" />
                 </MDBCardBody>
               </MDBCard>
             </div>
