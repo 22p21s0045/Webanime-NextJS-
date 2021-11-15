@@ -13,7 +13,7 @@ import {
   MDBBtn,
 } from "mdb-react-ui-kit";
 import CountUp from "react-countup";
-
+import ReactFontLoader from 'react-font-loader';
 import { AwesomeButton } from "react-awesome-button";
 import Aos from "aos";
 import { db } from "../components/firebase-config";
@@ -79,7 +79,8 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <CountUp end={100} className="counts" />
+                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap' />
+                  <CountUp end={100} className="counts" style={{ fontFamily: 'Red Hat Display'}}/>
                 </MDBCardBody>
               </MDBCard>
             </div>
