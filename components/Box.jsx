@@ -79,8 +79,9 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap' />
-                  <CountUp end={100} className="counts" style={{ fontFamily: 'Red Hat Display'}}/>
+                  <br/>
+                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
+                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -122,6 +123,10 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
+                  <br/>
+                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
+                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+
                 </MDBCardBody>
               </MDBCard>
             </div>
