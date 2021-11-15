@@ -15,16 +15,28 @@ import {
 
 import { AwesomeButton } from "react-awesome-button";
 import Aos from "aos";
-
+import {db} from '../components/firebase-config'
+import { collection,getDocs } from "@firebase/firestore";
 export default function Box() {
-  const [data, setdata] = useState([]);
+  const [data, setdata] = useState({
+    Name: "",
+    Like:0,
+
+
+  });
   useEffect(() => {
     axios("https://api.jikan.moe/v3/top/anime/1/bypopularity").then(
       (response) => setdata(response)
     );
     Aos.init();
   }, []);
-  console.log(data.data?.top[0].image_url);
+  const ref = collection(db,'Data')
+  console.log(ref)
+  const [databases, setdatabases] = useState([]);
+  useEffect(() => {
+
+
+  },databases)
 
   return (
     <div>
