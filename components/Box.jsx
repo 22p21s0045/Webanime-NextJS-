@@ -25,11 +25,7 @@ export default function Box() {
       (response) => setdata(response)
     );
     Aos.init();
-    WebFont.load({
-      google: {
-        families: ["Droid Sans", "Chilanka"],
-      },
-    });
+   
   }, []);
   const ref = collection(db, "Data");
   console.log(ref);
