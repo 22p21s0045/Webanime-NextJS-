@@ -15,28 +15,23 @@ import {
 
 import { AwesomeButton } from "react-awesome-button";
 import Aos from "aos";
-import {db} from '../components/firebase-config'
-import { collection,getDocs } from "@firebase/firestore";
+import { db } from "../components/firebase-config";
+import { collection, getDocs } from "@firebase/firestore";
 export default function Box() {
-  const [data, setdata] = useState({
-    Name: "",
-    Like:0,
-
-
-  });
+  const [data, setdata] = useState({});
   useEffect(() => {
     axios("https://api.jikan.moe/v3/top/anime/1/bypopularity").then(
       (response) => setdata(response)
     );
     Aos.init();
   }, []);
-  const ref = collection(db,'Data')
-  console.log(ref)
-  const [databases, setdatabases] = useState([]);
-  useEffect(() => {
-
-
-  },databases)
+  const ref = collection(db, "Data");
+  console.log(ref);
+  const [databases, setdatabases] = useState([{
+    Name: "",
+    Like: 0,
+  }]);
+  useEffect(() => {}, databases);
 
   return (
     <div>
@@ -53,9 +48,7 @@ export default function Box() {
                 />
                 <MDBCardBody>
                   <MDBCardTitle>1. {data.data?.top[0].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
 
                   <AwesomeButton
                     size="icon"
@@ -98,9 +91,7 @@ export default function Box() {
                 />
                 <MDBCardBody>
                   <MDBCardTitle>2. {data.data?.top[1].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
@@ -140,9 +131,7 @@ export default function Box() {
                 />
                 <MDBCardBody>
                   <MDBCardTitle>3. {data.data?.top[2].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
@@ -184,9 +173,7 @@ export default function Box() {
                 />
                 <MDBCardBody>
                   <MDBCardTitle>4. {data.data?.top[3].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
@@ -226,9 +213,7 @@ export default function Box() {
                 />
                 <MDBCardBody>
                   <MDBCardTitle>5. {data.data?.top[4].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
@@ -270,9 +255,7 @@ export default function Box() {
 
                 <MDBCardBody>
                   <MDBCardTitle>6. {data.data?.top[5].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
@@ -314,9 +297,7 @@ export default function Box() {
                 />
                 <MDBCardBody>
                   <MDBCardTitle>7. {data.data?.top[6].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
@@ -356,9 +337,7 @@ export default function Box() {
                 />
                 <MDBCardBody>
                   <MDBCardTitle>8. {data.data?.top[7].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
@@ -399,9 +378,7 @@ export default function Box() {
 
                 <MDBCardBody>
                   <MDBCardTitle>9. {data.data?.top[8].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
@@ -433,10 +410,7 @@ export default function Box() {
         </Row>
         <Row style={{ paddingTop: 60 }}>
           <Col classname="boxs" md={6} lg={4}>
-            <div
-              data-aos="fade-up"
-              
-            >
+            <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
                   src={data.data?.top[9].image_url}
@@ -447,9 +421,7 @@ export default function Box() {
 
                 <MDBCardBody>
                   <MDBCardTitle>10. {data.data?.top[9].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
@@ -479,10 +451,7 @@ export default function Box() {
             </div>
           </Col>
           <Col classname="boxs" md={6} lg={4}>
-            <div
-              data-aos="fade-up"
-              
-            >
+            <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
                   src={data.data?.top[10].image_url}
@@ -492,9 +461,7 @@ export default function Box() {
                 />
                 <MDBCardBody>
                   <MDBCardTitle>11. {data.data?.top[10].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
@@ -524,10 +491,7 @@ export default function Box() {
             </div>
           </Col>
           <Col classname="boxs" md={6} lg={4}>
-            <div
-              data-aos="fade-up"
-              
-            >
+            <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
                   src={data.data?.top[11].image_url}
@@ -537,9 +501,7 @@ export default function Box() {
                 />
                 <MDBCardBody>
                   <MDBCardTitle>12. {data.data?.top[11].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
@@ -571,10 +533,7 @@ export default function Box() {
         </Row>
         <Row style={{ paddingTop: 60 }}>
           <Col classname="boxs" md={6} lg={4}>
-            <div
-              data-aos="fade-up"
-              
-            >
+            <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
                   src={data.data?.top[12].image_url}
@@ -584,9 +543,7 @@ export default function Box() {
                 />
                 <MDBCardBody>
                   <MDBCardTitle>13. {data.data?.top[12].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
@@ -616,10 +573,7 @@ export default function Box() {
             </div>
           </Col>
           <Col classname="boxs" md={6} lg={4}>
-            <div
-              data-aos="fade-up"
-              
-            >
+            <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
                   src={data.data?.top[13].image_url}
@@ -629,9 +583,7 @@ export default function Box() {
                 />
                 <MDBCardBody>
                   <MDBCardTitle>14. {data.data?.top[13].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
@@ -661,10 +613,7 @@ export default function Box() {
             </div>
           </Col>
           <Col classname="boxs" md={6} lg={4}>
-            <div
-              data-aos="fade-up"
-              
-            >
+            <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
                   src={data.data?.top[14].image_url}
@@ -675,9 +624,7 @@ export default function Box() {
 
                 <MDBCardBody>
                   <MDBCardTitle>15. {data.data?.top[14].title} </MDBCardTitle>
-                  <MDBCardText>
-
-                  </MDBCardText>
+                  <MDBCardText></MDBCardText>
                   <AwesomeButton
                     size="icon"
                     href="https://img.icons8.com/color/48/000000/youtube-play.png"
