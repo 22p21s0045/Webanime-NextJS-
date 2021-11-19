@@ -25,12 +25,12 @@ export default function Box() {
     );
     Aos.init();
     axios('https://sheetdb.io/api/v1/n8pw5o472mjqa')
-    .then(response => setdatabases(response))
+     .then(response => setdatabases(response))
   }, []);
-console.log(databases.data)
 useEffect(() => {
 
-}, [databases]);
+}, []);
+console.log(databases.data)
 
   return (
     <div>
