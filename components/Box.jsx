@@ -10,14 +10,14 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBCardImage,
-  MDBBtn,
 } from "mdb-react-ui-kit";
 import CountUp from "react-countup";
-import ReactFontLoader from 'react-font-loader';
+import ReactFontLoader from "react-font-loader";
 import { AwesomeButton } from "react-awesome-button";
 import Aos from "aos";
-import { db } from "../components/firebase-config";
-import { collection, getDocs,query } from "@firebase/firestore";
+import {dbs} from "../components/firebase-config";
+import { collection, query } from "@firebase/firestore";
+
 export default function Box() {
   const [data, setdata] = useState({});
   useEffect(() => {
@@ -25,18 +25,16 @@ export default function Box() {
       (response) => setdata(response)
     );
     Aos.init();
-   
   }, []);
-  const ref = query(collection(db,"Data"));
-  console.log(ref);
+
   const [databases, setdatabases] = useState([
     {
       Name: "",
-      Like: 0,
+      Like: 10,
     },
   ]);
-  useEffect(() => {}, databases);
-  console.log();
+  const ref = query(collection(dbs, "Data"));
+  console.log(ref);
 
   return (
     <div>
@@ -80,9 +78,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -124,10 +128,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
-
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -168,9 +177,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -213,9 +228,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -256,9 +277,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -301,9 +328,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -346,9 +379,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -389,9 +428,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -433,9 +478,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -479,9 +530,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -522,9 +579,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -565,9 +628,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -610,9 +679,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -653,9 +728,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
@@ -697,9 +778,15 @@ export default function Box() {
                       width="30rem"
                     />
                   </AwesomeButton>
-                  <br/>
-                  <ReactFontLoader url='https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap' />
-                  <CountUp start ={0} duration={1} end={100} className="counts" style={{ fontFamily:'Pacifico',fontSize:50}}/>
+                  <br />
+                  <ReactFontLoader url="https://fonts.googleapis.com/css2?family=Pacifico&family=Praise&display=swap" />
+                  <CountUp
+                    start={0}
+                    duration={1}
+                    end={100}
+                    className="counts"
+                    style={{ fontFamily: "Pacifico", fontSize: 50 }}
+                  />
                 </MDBCardBody>
               </MDBCard>
             </div>
