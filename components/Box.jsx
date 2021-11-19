@@ -16,7 +16,7 @@ import ReactFontLoader from "react-font-loader";
 import { AwesomeButton } from "react-awesome-button";
 import Aos from "aos";
 import {dbs} from "../components/firebase-config";
-import { collection, query } from "@firebase/firestore";
+import { collection, getDoc, query ,doc} from "@firebase/firestore";
 
 export default function Box() {
   const [data, setdata] = useState({});
@@ -34,7 +34,9 @@ export default function Box() {
     },
   ]);
   const ref = query(collection(dbs, "Data"));
-  console.log(ref);
+  const docref = doc(dbs, 'Data','2');
+  const getdoc = getDoc(docref);
+  console.log(getdoc);
 
   return (
     <div>
