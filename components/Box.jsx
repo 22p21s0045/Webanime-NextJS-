@@ -15,28 +15,22 @@ import CountUp from "react-countup";
 import ReactFontLoader from "react-font-loader";
 import { AwesomeButton } from "react-awesome-button";
 import Aos from "aos";
-import {dbs} from "../components/firebase-config";
-import { collection, getDoc, query ,doc} from "@firebase/firestore";
 
 export default function Box() {
+  const [databases, setdatabases] = useState({});
   const [data, setdata] = useState({});
   useEffect(() => {
     axios("https://api.jikan.moe/v3/top/anime/1/bypopularity").then(
       (response) => setdata(response)
     );
     Aos.init();
+    axios('https://sheetdb.io/api/v1/n8pw5o472mjqa')
+    .then(response => setdatabases(response))
   }, []);
+console.log(databases.data)
+useEffect(() => {
 
-  const [databases, setdatabases] = useState([
-    {
-      Name: "",
-      Like: 10,
-    },
-  ]);
-  const ref = query(collection(dbs, "Data"));
-  const docref = doc(dbs, 'Data','2');
-  const getdoc = getDoc(docref);
-  console.log(getdoc);
+}, [databases]);
 
   return (
     <div>
