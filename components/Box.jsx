@@ -19,19 +19,50 @@ import Aos from "aos";
 export default function Box() {
   const [databases, setdatabases] = useState({});
   const [data, setdata] = useState({});
+  async function fetchData() {
+    try {
+    const response = await axios.get('https://sheet.best/api/sheets/d866b506-a505-4a9f-881d-92c6a9dc7d1b');
+       return setdatabases(response);
+    }
+    catch(error) {
+      console.log(error);
+    }
+  }
   useEffect(() => {
+    fetchData();
     axios("https://api.jikan.moe/v3/top/anime/1/bypopularity").then(
       (response) => setdata(response)
     );
     Aos.init();
-    axios('https://sheetdb.io/api/v1/n8pw5o472mjqa')
-     .then(response => setdatabases(response))
+     
+       
+     
+    
+   
   }, []);
-useEffect(() => {
 
-}, []);
-console.log(databases.data)
 
+if (databases.data == undefined) {
+  return (
+    <div>
+      <ReactFontLoader
+        style={{
+          fontFamily: "Noto Sans JP",
+          fontStyle: "normal",
+          fontDisplay: "swap",
+          fontWeight: 400,
+          src:
+            "https://fonts.gstatic.com/s/notosansjp/v7/NoaEzkMhXGnBxnC9ZIKYpJyhvXRa8TVwTICgirnJhmVJw.woff2",
+        }}
+      />
+      <div className="text-center">
+        <h1>Loading...</h1>
+        
+      </div>
+    </div>
+  );
+}
+console.log(databases.data[0]);
   return (
     <div>
       <Container style={{ paddingTop: 100 }} classname="bigboxs">
