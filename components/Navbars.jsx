@@ -7,7 +7,7 @@ export default function Navbars() {
             
             <Navbar className="color-nav" variant="dark">
     <Container>
-    <Navbar.Brand href="#home" className="color-fonts">GO Anime</Navbar.Brand>
+    <Navbar.Brand href="/" className="color-fonts">GO Anime</Navbar.Brand>
     <Nav className="me-auto">
       <Nav.Link href="#home" className = 'text-dark' >Home</Nav.Link>
       <Nav.Link href="#features" className = 'text-dark'>เเนะนํา</Nav.Link>
