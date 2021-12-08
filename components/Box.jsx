@@ -15,8 +15,9 @@ import CountUp from "react-countup";
 import ReactFontLoader from "react-font-loader";
 import { AwesomeButton } from "react-awesome-button";
 import Aos from "aos";
-
+import { useDispatch } from "react-redux";
 export default function Box() {
+  const dispatch = useDispatch();
   const [databases, setdatabases] = useState({});
   const [data, setdata] = useState({});
   async function fetchData() {
@@ -67,7 +68,7 @@ console.log(databases.data[0]);
     <div>
       <Container style={{ paddingTop: 100 }} classname="bigboxs">
         <Row>
-          <Col classname="boxs" md={6} lg={4}>
+          <Col className="boxs" md={6} lg={4}>
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -97,7 +98,7 @@ console.log(databases.data[0]);
                     type="primary"
                     className="awecomments"
                     style={{ paddingLeft: 5 }}
-                    onPress={(next) => {}}
+                    onPress={ dispatch({type: 'INCREMENT'})}
                   >
                     <img
                       src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
