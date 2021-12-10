@@ -7,9 +7,12 @@ import MyApp from './_app';
 import Particlebg from '../components/Particlebg'
 import PageNav from '../components/PageNav'
 import Comments from '../components/Comment';
+import { Provider } from 'react-redux';
+import store from '../components/Store/store';
 export default function Home() {
   return (
     <div>
+      <Provider store={store}>
       <Navbars/>
   
       <Rank/>
@@ -17,6 +20,7 @@ export default function Home() {
       <Particlebg/>
       <PageNav/>
       <Comments/>
+      </Provider>
     </div>
 
 

@@ -15,13 +15,15 @@ import CountUp from "react-countup";
 import ReactFontLoader from "react-font-loader";
 import { AwesomeButton } from "react-awesome-button";
 import Aos from "aos";
-
+import { useDispatch ,useSelector } from "react-redux";
+import store from './Store/store'
 export default function Box() {
+  const dispatch = useDispatch();
   const [databases, setdatabases] = useState({});
   const [data, setdata] = useState({});
   async function fetchData() {
     try {
-    const response = await axios.get('https://sheet.best/api/sheets/d866b506-a505-4a9f-881d-92c6a9dc7d1b');
+    const response = await axios.get('');
        return setdatabases(response);
     }
     catch(error) {
@@ -62,12 +64,14 @@ if (databases.data == undefined) {
     </div>
   );
 }
+
 console.log(databases.data[0]);
+console.log(store.getState());
   return (
     <div>
       <Container style={{ paddingTop: 100 }} classname="bigboxs">
         <Row>
-          <Col classname="boxs" md={6} lg={4}>
+          <Col className="boxs" md={6} lg={4}>
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -97,7 +101,7 @@ console.log(databases.data[0]);
                     type="primary"
                     className="awecomments"
                     style={{ paddingLeft: 5 }}
-                    onPress={(next) => {}}
+                    onPress={ dispatch({type: 'INCREMENT'})}
                   >
                     <img
                       src="https://www.img.in.th/images/571f6762bd03c76ebc96045cbe76a132.png"
