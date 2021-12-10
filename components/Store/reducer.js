@@ -14,24 +14,31 @@ async function getdata() {
   return arrays;
 }
 
-//FIXME: This is good but not good enough.
+
 async function mapdata() {
   let q = await getdata();
   let c = q.map((item) => item);
   console.log(c);
   return c;
 }
+async function setdata() {
+  let q = await getdata();
+  return q;
+
+}
+
 mapdata();
-let data = getdata();
-let setdata = []
-data.then(response => setdata.push(response));
-console.log(data[0]);
-console.log(setdata);
+
+let data = setdata();
+let obj =data.then( response => { data = response; console.log(data)});
+
+
+
 //FIXME This is Bug reducer cannot get state
-const counter = (state = setdata, action) => {
+const counter = (state = data, action) => {
   switch (action.type) {
     case "INCREMENT":
-      return state[0].ID + 1;
+      return state + 1;
     case "DECREMENT":
       return state - 1;
     case "INCREMENT1":

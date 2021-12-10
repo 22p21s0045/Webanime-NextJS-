@@ -23,7 +23,7 @@ export default function Box() {
   const [data, setdata] = useState({});
   async function fetchData() {
     try {
-    const response = await axios.get('https://sheet.best/api/sheets/d866b506-a505-4a9f-881d-92c6a9dc7d1b');
+    const response = await axios.get('');
        return setdatabases(response);
     }
     catch(error) {
