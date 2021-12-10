@@ -23,11 +23,15 @@ async function mapdata() {
 }
 mapdata();
 let data = getdata();
+let setdata = []
+data.then(response => setdata.push(response));
+console.log(data[0]);
+console.log(setdata);
 //FIXME This is Bug reducer cannot get state
-const counter = (state = data, action) => {
+const counter = (state = setdata, action) => {
   switch (action.type) {
     case "INCREMENT":
-      return state[0] + 1;
+      return state[0].ID + 1;
     case "DECREMENT":
       return state - 1;
     case "INCREMENT1":

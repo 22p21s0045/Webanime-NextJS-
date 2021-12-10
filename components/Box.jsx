@@ -15,7 +15,8 @@ import CountUp from "react-countup";
 import ReactFontLoader from "react-font-loader";
 import { AwesomeButton } from "react-awesome-button";
 import Aos from "aos";
-import { useDispatch } from "react-redux";
+import { useDispatch ,useSelector } from "react-redux";
+import store from './Store/store'
 export default function Box() {
   const dispatch = useDispatch();
   const [databases, setdatabases] = useState({});
@@ -63,7 +64,9 @@ if (databases.data == undefined) {
     </div>
   );
 }
+
 console.log(databases.data[0]);
+console.log(store.getState());
   return (
     <div>
       <Container style={{ paddingTop: 100 }} classname="bigboxs">
