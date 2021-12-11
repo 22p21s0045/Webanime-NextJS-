@@ -1,6 +1,6 @@
 import React from 'react'
 import {Navbar, Nav, NavItem,Container} from 'react-bootstrap';
-
+import { MDBBtn } from 'mdb-react-ui-kit';
 export default function Navbars() {
     return (
         <div>
@@ -12,8 +12,20 @@ export default function Navbars() {
       <Nav.Link href="#home" className = 'text-dark' >Home</Nav.Link>
       <Nav.Link href="#features" className = 'text-dark'>เเนะนํา</Nav.Link>
       <Nav.Link href="#pricing" className = 'text-dark'>Pricing</Nav.Link>
+     
+      
+      
+      
+      
+
     </Nav>
     </Container>
+    <Nav className="navbar-right">
+      <div style = {{paddingRight:50}}>
+      <MDBBtn float = 'right'style = {{}}>LOGIN</MDBBtn>
+      </div>
+
+      </Nav>
   </Navbar>
         </div>
     )
