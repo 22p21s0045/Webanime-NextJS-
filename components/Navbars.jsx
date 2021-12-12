@@ -3,7 +3,10 @@ import {Navbar, Nav, NavItem,Container} from 'react-bootstrap';
 import { MDBBtn } from 'mdb-react-ui-kit';
 import { authen } from './Store/firebase';
 import { GoogleAuthProvider,signInWithPopup } from "firebase/auth";
+import { useState } from 'react';
+import Swal from 'sweetalert2'
 export default function Navbars() {
+  const [user,setuser] = useState(null);
   const provider = new GoogleAuthProvider();
   const signIn = () => {
     signInWithPopup(authen, provider)
@@ -13,6 +16,13 @@ export default function Navbars() {
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
+    setuser(user);
+    Swal.fire({
+      title: 'Login Success',
+      text: 'Welcome '+user.displayName,
+      icon: 'success',
+      confirmButtonText: 'OK'
+    })
     // ...
   }).catch((error) => {
     // Handle Errors here.
@@ -25,6 +35,8 @@ export default function Navbars() {
     // ...
   });
   }
+  
+  console.log(user);
     return (
         <div>
             
