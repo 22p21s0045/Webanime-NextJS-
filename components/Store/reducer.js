@@ -21,19 +21,17 @@ async function mapdata() {
   console.log(c);
   return c;
 }
+var q;
 async function setdata() {
-  let q = await getdata();
+  q = await getdata();
   return q;
 
 }
 
 mapdata();
-
+setdata();
 let data = setdata();
-let obj =data.then( response => { data = response; console.log(data)});
-
-
-
+console.log(q);
 //FIXME This is Bug reducer cannot get state
 const counter = (state = data, action) => {
   switch (action.type) {
