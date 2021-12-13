@@ -45,6 +45,7 @@ export default function Navbars() {
       confirmButtonColor: "#3085d6",
     }).then((result) => {
       if (result.isConfirmed) {
+        authen.signOut();
         setuser(null);
         console.log("heheboi");
       }
