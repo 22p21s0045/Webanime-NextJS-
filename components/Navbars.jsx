@@ -5,6 +5,8 @@ import { authen } from "./Store/firebase";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
 export default function Navbars() {
   const [user, setuser] = useState(null);
   const provider = new GoogleAuthProvider();
@@ -16,7 +18,9 @@ export default function Navbars() {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
+
         setuser(user);
+
         Swal.fire({
           title: "Login Success",
           text: "Welcome " + user.displayName,
@@ -74,6 +78,14 @@ export default function Navbars() {
             </Nav>
           </Container>
           <Nav className="navbar-right">
+            <div style={{ paddingRight: 55, paddingBottom: 1 }}>
+              <Stack>
+                <h7>{user.displayName}</h7>
+                <Avatar src = {user.photoURL}/>
+              </Stack>
+            </div>
+          </Nav>
+          <Nav className="navbar-right">
             <div style={{ paddingRight: 50 }}>
               <MDBBtn float="right" onClick={logout}>
                 SIGNOUT
@@ -85,36 +97,41 @@ export default function Navbars() {
     );
   } else {
     return (
-    <div>
-      <Navbar className="color-nav" variant="dark">
-        <Container>
-          <Navbar.Brand href="/" className="color-fonts">
-            GO Anime
-          </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home" className="text-dark">
-              Home
-            </Nav.Link>
-            <Nav.Link href="#features" className="text-dark">
-              เเนะนํา
-            </Nav.Link>
-            <Nav.Link href="#pricing" className="text-dark">
-              Pricing
-            </Nav.Link>
+      <div>
+        <Navbar className="color-nav" variant="dark">
+          <Container>
+            <Navbar.Brand href="/" className="color-fonts">
+              GO Anime
+            </Navbar.Brand>
+            <Nav className="me-auto">
+              <Nav.Link href="#home" className="text-dark">
+                Home
+              </Nav.Link>
+              <Nav.Link href="#features" className="text-dark">
+                เเนะนํา
+              </Nav.Link>
+              <Nav.Link href="#pricing" className="text-dark">
+                Pricing
+              </Nav.Link>
+            </Nav>
+          </Container>
+          <Nav className="navbar-right">
+            <div style={{ paddingRight: 55, paddingBottom: 1 }}>
+              <Stack>
+                <h7>Guest</h7>
+                <Avatar />
+              </Stack>
+            </div>
           </Nav>
-        </Container>
-        <Nav className="navbar-right">
-          <div style={{ paddingRight: 50 }}>
-            <MDBBtn float="right" onClick={signIn}>
-              LOGIN
-            </MDBBtn>
-          </div>
-        </Nav>
-      </Navbar>
-    </div>
-  );
-    
+          <Nav className="navbar-right">
+            <div style={{ paddingRight: 50 }}>
+              <MDBBtn float="right" onClick={signIn}>
+                LOGIN
+              </MDBBtn>
+            </div>
+          </Nav>
+        </Navbar>
+      </div>
+    );
   }
-
-  
 }
