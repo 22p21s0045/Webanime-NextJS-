@@ -17,6 +17,7 @@ import { AwesomeButton } from "react-awesome-button";
 import Aos from "aos";
 import { useDispatch ,useSelector } from "react-redux";
 import store from './Store/store'
+import Stack from 'react-bootstrap/Stack'
 export default function Box() {
   const dispatch = useDispatch();
   const [databases, setdatabases] = useState({});
@@ -69,9 +70,9 @@ console.log(databases.data[0]);
 console.log(store.getState());
   return (
     <div>
-      <Container style={{ paddingTop: 100 }} classname="bigboxs">
-        <Row>
-          <Col className="boxs" md={6} lg={4}>
+      <Container style={{ paddingTop: 100  }} classname="bigboxs">
+        <Row style = {{backgroundColor: 'white',gap:50}}>
+          <Col className="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -123,7 +124,7 @@ console.log(store.getState());
             </div>
           </Col>
 
-          <Col classname="boxs" md={6} lg={4}>
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -172,7 +173,7 @@ console.log(store.getState());
               </MDBCard>
             </div>
           </Col>
-          <Col classname="boxs" md={6} lg={4}>
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -221,9 +222,9 @@ console.log(store.getState());
               </MDBCard>
             </div>
           </Col>
-        </Row>
-        <Row style={{ paddingTop: 60 }}>
-          <Col classname="boxs" md={6} lg={4}>
+        
+       
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -272,7 +273,7 @@ console.log(store.getState());
               </MDBCard>
             </div>
           </Col>
-          <Col classname="boxs" md={6} lg={4}>
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -322,7 +323,7 @@ console.log(store.getState());
             </div>
           </Col>
 
-          <Col classname="boxs" md={6} lg={4}>
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -372,9 +373,9 @@ console.log(store.getState());
               </MDBCard>
             </div>
           </Col>
-        </Row>
-        <Row style={{ paddingTop: 60 }} classname="boxs">
-          <Col classname="boxs" md={6} lg={4}>
+      
+        
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -423,7 +424,7 @@ console.log(store.getState());
               </MDBCard>
             </div>
           </Col>
-          <Col classname="boxs" md={6} lg={4}>
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -472,7 +473,7 @@ console.log(store.getState());
               </MDBCard>
             </div>
           </Col>
-          <Col classname="boxs" md={6} lg={4}>
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -522,9 +523,9 @@ console.log(store.getState());
               </MDBCard>
             </div>
           </Col>
-        </Row>
-        <Row style={{ paddingTop: 60 }}>
-          <Col classname="boxs" md={6} lg={4}>
+        
+       
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -574,7 +575,7 @@ console.log(store.getState());
               </MDBCard>
             </div>
           </Col>
-          <Col classname="boxs" md={6} lg={4}>
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -623,7 +624,7 @@ console.log(store.getState());
               </MDBCard>
             </div>
           </Col>
-          <Col classname="boxs" md={6} lg={4}>
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -672,9 +673,9 @@ console.log(store.getState());
               </MDBCard>
             </div>
           </Col>
-        </Row>
-        <Row style={{ paddingTop: 60 }}>
-          <Col classname="boxs" md={6} lg={4}>
+        
+      
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -723,7 +724,7 @@ console.log(store.getState());
               </MDBCard>
             </div>
           </Col>
-          <Col classname="boxs" md={6} lg={4}>
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
@@ -772,7 +773,7 @@ console.log(store.getState());
               </MDBCard>
             </div>
           </Col>
-          <Col classname="boxs" md={6} lg={4}>
+          <Col classname="boxs" >
             <div data-aos="fade-up">
               <MDBCard style={{ maxWidth: "18rem" }}>
                 <MDBCardImage
