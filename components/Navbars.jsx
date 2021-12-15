@@ -61,7 +61,7 @@ export default function Navbars() {
     return (
       <div>
         <Navbar className="color-nav" variant="dark">
-          <Container>
+          <Container >
             <Navbar.Brand href="/" className="color-fonts">
               GO Anime
             </Navbar.Brand>
