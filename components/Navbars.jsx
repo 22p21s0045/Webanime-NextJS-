@@ -102,6 +102,10 @@ export default function Navbars() {
           <Container>
             <Navbar.Brand href="/" className="color-fonts">
               GO Anime
+              <img
+              src = 'https://www.img.in.th/images/485f5e71635dd9ed329031f92020c3a8.gif'
+              height="50" width="100"
+              />
             </Navbar.Brand>
             <Nav className="me-auto">
               <Nav.Link href="#home" className="text-dark">
